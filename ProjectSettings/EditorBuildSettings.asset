@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 307ce225ebb0aaa42906d5c719c13232
+  - enabled: 1
+    path: Assets/Scenes/BlockPusher1.unity
+    guid: caf633f93cad8a64f8a7a9f1b76cc29f
+  - enabled: 1
+    path: Assets/Scenes/BlockPusher2.unity
+    guid: a184d7accd81a6047b12f140c3c52b35
+  - enabled: 1
+    path: Assets/Scenes/BlockPusher3.unity
+    guid: f5e843f3505d73b4fbc6ae8ce408d0e4
+  m_configObjects: {}
