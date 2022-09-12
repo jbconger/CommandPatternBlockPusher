@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+	[SerializeField]
+	CommandListManager commandListManager;
+
+	[HideInInspector]
+	public AudioSource stepSound;
+
 	private GameObject[] walls;
 	private GameObject[] crates;
 
@@ -11,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Start()
 	{
+		stepSound = this.GetComponent<AudioSource>();
 		walls = GameObject.FindGameObjectsWithTag("Wall");
 		crates = GameObject.FindGameObjectsWithTag("Crate");
 		bCanMove = true;
@@ -54,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
 		}
 		else
 		{
-			transform.Translate(direction);
+			//transform.Translate(direction); //sans command implementation
+			commandListManager.AddCommand(this.gameObject, direction);
 			return true;
 		}
 	}

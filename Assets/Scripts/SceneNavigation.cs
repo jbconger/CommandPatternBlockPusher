@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneNavigation : MonoBehaviour
 {
+	public void MainMenu()
+	{
+		SceneManager.LoadScene("StartScene");
+	}
+
     public void PlayLevel1()
 	{
 		SceneManager.LoadScene("BlockPusher1");

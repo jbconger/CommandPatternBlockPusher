@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class MoveObjectCommand : Command
 {
-	private GameObject gameObject;
+	[HideInInspector]
+	public GameObject gameObject;
 	private Vector3 previousPosition;
 	private Vector3 newPosition;
 	public bool bIsCrate;

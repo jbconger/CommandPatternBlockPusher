@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class CrateMovement : MonoBehaviour
 {
+	[SerializeField]
+	CommandListManager commandListManager;
+
+	[HideInInspector]
+	public AudioSource pushSound;
+
 	private GameObject[] walls;
 	private GameObject[] crates;
 
 	private void Start()
 	{
+		pushSound = this.GetComponent<AudioSource>();
 		walls = GameObject.FindGameObjectsWithTag("Wall");
 		crates = GameObject.FindGameObjectsWithTag("Crate");
 	}
@@ -19,7 +26,8 @@ public class CrateMovement : MonoBehaviour
 			return false;
 		else
 		{
-			transform.Translate(direction);
+			//transform.Translate(direction); //sams command implementation
+			commandListManager.AddCommand(this.gameObject, direction);
 			return true;
 		}
 	}

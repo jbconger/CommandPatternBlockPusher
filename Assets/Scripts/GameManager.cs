@@ -13,14 +13,24 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	GameObject goal;
 
+	private AudioSource goalSound;
+	private bool playSound = true;
+
+	private void Awake()
+	{
+		goalSound = this.GetComponent<AudioSource>();
+	}
+
 	private void Update()
 	{
-		if (player.transform.position == goal.transform.position)
+		if (player.transform.position == goal.transform.position && playSound)
 			LevelEnd();
 	}
 
 	public void LevelEnd()
 	{
+		playSound = false;
 		levelEndOverlay.SetActive(true);
+		goalSound.Play();
 	}
 }

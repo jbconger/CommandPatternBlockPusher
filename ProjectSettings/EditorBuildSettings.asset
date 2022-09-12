@@ -13,8 +13,8 @@ EditorBuildSettings:
     guid: caf633f93cad8a64f8a7a9f1b76cc29f
   - enabled: 1
     path: Assets/Scenes/BlockPusher2.unity
-    guid: a184d7accd81a6047b12f140c3c52b35
+    guid: 7e8afc715a6cd944c889edb4e24aaf54
   - enabled: 1
     path: Assets/Scenes/BlockPusher3.unity
-    guid: f5e843f3505d73b4fbc6ae8ce408d0e4
+    guid: 2564c386792fdcb46a8f5c303fc97feb
   m_configObjects: {}
