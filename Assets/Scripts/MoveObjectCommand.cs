@@ -5,12 +5,15 @@ public class MoveObjectCommand : Command
 	private GameObject gameObject;
 	private Vector3 previousPosition;
 	private Vector3 newPosition;
+	public bool bIsCrate;
 
-	MoveObjectCommand(GameObject i_gameObject, Vector3 i_newPosition)
+	public MoveObjectCommand(GameObject i_gameObject, Vector3 i_newPosition)
 	{
 		gameObject = i_gameObject;
 		previousPosition = i_gameObject.transform.position;
 		newPosition = i_newPosition;
+		if (i_gameObject.CompareTag("Crate"))
+			bIsCrate = true;
 	}
 
 	public override void Execute()
